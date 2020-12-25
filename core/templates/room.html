@@ -4,11 +4,21 @@
     <meta charset="utf-8"/>
     <title>Chat Room</title>
 </head>
-<body>
-    <textarea id="chat-log" cols="100" rows="20"></textarea><br>
-    <input id="chat-message-input" type="text" size="100"><br>
-    <input id="chat-message-submit" type="button" value="Send">
+<body style="background-color: black;">
+    <textarea id="chat-log" cols="100" rows="20" style="margin: 0px;width: 1418px;height: 297px;background: #8888;outline: none;border: none;border-radius: 5px;resize: none; color: white; padding: 5px;"></textarea><br>
+    <div style="display: flex; justify-content: center;">
+    <input id="chat-message-input" type="text" size="100" style="
+    border: none;
+    border-radius: 5px;
+    background: #888;
+    padding: 10px;
+    outline: none;
+    color: white;
+    margin-top: 15px;
+"><br>
+    <input id="chat-message-submit" type="button" value="Send" style="border: none; padding: 5px; border-radius: 5px; width: 80px; margin-top: 14px; margin-left: 15px;">
     {{ room_name|json_script:"room-name" }}
+</div>
     <script>
         const roomName = JSON.parse(document.getElementById('room-name').textContent);
 
